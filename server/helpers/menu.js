@@ -9,7 +9,7 @@ module.exports.createMenu= async (info)=>{
     console.log("prop "+prop)
     console.log("client "+client);
     
-var h=await  client.query(prop.insertMenu,[info.titulo,info.parent_menu]);
+var h=await  client.query(prop.insertMenu,[info.title,info.parent_menu]);
 client.end(); 
 return h;
      
