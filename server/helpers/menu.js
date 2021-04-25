@@ -20,7 +20,7 @@ module.exports.selectAllMenu= async (info)=>{
     const client = new Client(prop.con)
     client.connect()
    
-       var h=await client.query(prop.select_all_menu,[])
+       var h=await client.query(prop.select_all_menu)
        client.end();
 return h;
 
