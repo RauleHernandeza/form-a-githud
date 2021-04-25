@@ -8,8 +8,8 @@ app.post('/', function (req, res) {
     console.log(info)
    user.login(info).then(respt=>{
      let resp=respt.rows;
-
-     if(bcrypt.compareSync(info.contraseña,resp[0].contraseña)){
+    
+     if(bcrypt.compareSync(info.contraseña,resp[0].contrasena)){
        res.send({status:200,body:resp[0]});
 
      }else{
