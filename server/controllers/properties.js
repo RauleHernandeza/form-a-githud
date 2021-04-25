@@ -8,7 +8,7 @@ module.exports={
 
     select_all_menu:"select * from menu",
     
-     delete_menu:"delete from meno where id_menu=$1",
+     delete_menu:"delete from menu where id_menu=$1",
      insertForm:"insert into formulario (title,descripcion,id_menu) values ($1,$2,$3)",
 
      selectForm:"select  * from formulario where id_formulario=$1",

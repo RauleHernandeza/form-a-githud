@@ -18,7 +18,7 @@ res.send({status:400,body:err});
 
 })
 
-app.get('/',function(req,res){
+app.post('/select',function(req,res){
 
     let info=req.body;
     console.log(info)
