@@ -20,8 +20,6 @@ res.send({status:400,body:err});
 
 app.post('/select',function(req,res){
 
-    let info=req.body;
-    console.log(info)
   menu.selectAllMenu()
 .then(respt=>{
 
@@ -35,7 +33,7 @@ app.post('/select',function(req,res){
 
 
 }).catch(err=>{
-
+console.log("error"  +err)
     res.send({status:400,body:err});
 })
 
