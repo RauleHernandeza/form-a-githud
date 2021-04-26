@@ -26,7 +26,8 @@ app.post('/create', function (req, res) {
 
 res.send({status:200,body:rest})
      }).catch(err=>{
-res.send({status:400,body:err});
+              console.log(err)
+        res.send({status:400,body:err});
 
      })    
 
