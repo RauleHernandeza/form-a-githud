@@ -9,6 +9,7 @@ app.post('/create', function (req, res) {
   
      form.createForm(info).then(resp=>{
          let rest=resp.rows[0];
+         console.log(rest)
             let j=-1;
             console.log(info.preguntas.length)
          for(i=0;i<info.preguntas.length;i++){
