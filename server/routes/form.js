@@ -14,7 +14,7 @@ app.post('/create', function (req, res) {
             console.log(info.preguntas.length)
             
          for(i=0;i<info.preguntas.length;i++){
-             j=rest.id_formulario;
+             j=rest.id_forrmulario;
              console.log(j);
              info.preguntas[i]={...info.preguntas[i],id_formulario:j}
              console.log(rest)
