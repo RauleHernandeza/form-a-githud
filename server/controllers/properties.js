@@ -13,7 +13,7 @@ module.exports={
 
      selectForm:"select  * from formulario ",
 
-     deleteForm:"delete from formulario inner join pregunta on (pregunta.id_forrmulario = formulario.id_forrmulario and formulario.id_forrmulario= $1 )",
+     deleteForm:"delete from formulario id_forrmulario= $1 ",
      insertPregunta:"insert into  pregunta (title,input,id_forrmulario) values ($1,$2,$3)"
 
     }
