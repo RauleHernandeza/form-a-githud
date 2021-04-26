@@ -67,9 +67,7 @@ app.post('/delete',function(req,res){
     console.log(info)
     preguntas.deletepregunta(info).then(res=>{
 
-    }).catch(err=>{
-        console.log(err)
-    })
+   
   form.deleteForm(info)
 .then(respt=>{
 
@@ -86,6 +84,8 @@ app.post('/delete',function(req,res){
 console.log(err)
     res.send({status:400,body:err});
 })
-
+ }).catch(err=>{
+        console.log(err)
+    })
 })
 module.exports=app;
