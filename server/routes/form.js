@@ -51,6 +51,7 @@ preguntas.selectpregunta().then(resm=>{
    let j;
        for(i=0;i<resp.length;i++){
       j=rest.filter(pregunta=>{ pregunta.id_forrmulario == resp.id_forrmulario})
+      consoole.log(j)
         resp[i]={...resp[i],j}
 
        }
