@@ -30,7 +30,7 @@ module.exports.deleteForm= async (info)=>{
     client.connect()
     console.log("prop "+prop)
     console.log("client "+client);
-    var h=await  client.query(prop.deleteForm,[info.id_formulario])
+    var h=await  client.query(prop.deleteForm,[info.id_forrmulario])
 client.end();
    return h
      
