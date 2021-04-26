@@ -65,7 +65,7 @@ app.post('/delete',function(req,res){
 
     let info=req.body;
     console.log(info)
-    preguntas.deletepregunta(info).then(res=>{
+    preguntas.deletepregunta(info).then(rest=>{
 
    
   form.deleteForm(info)
