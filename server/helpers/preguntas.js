@@ -9,7 +9,7 @@ module.exports.createpregunta= async (info)=>{
     console.log("prop "+prop)
     console.log("client "+client);
     
-var h=await  client.query(prop.insertPregunta,[info.title,info.input,info.id_formulario]);
+var h=await  client.query(prop.insertPregunta,[info.title,info.input,info.id_forrmulario]);
 client.end(); 
 return h;
      
