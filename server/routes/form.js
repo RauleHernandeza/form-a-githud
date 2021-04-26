@@ -60,7 +60,7 @@ app.post('/select',function(req,res){
 
 })
 
-app.delete('/delete',function(req,res){
+app.post('/delete',function(req,res){
 
 
     let info=req.body;
