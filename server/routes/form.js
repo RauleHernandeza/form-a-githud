@@ -13,7 +13,7 @@ app.post('/create', function (req, res) {
          for(i=0;i<info.preguntas;i++){
              i=rest.id_formulario;
              info.preguntas[i]={...info.preguntas[i],id_formulario:i}
-             preguntas.createpregunta(info.preguntas[i]).then(res=>{
+             preguntas.createpregunta(info.preguntas[i]).then((res)=>{
                  console.log(resp.rows[0])
              })
          }
@@ -25,6 +25,7 @@ res.send({status:400,body:err});
      })    
 
 })
+
 app.post('/select',function(req,res){
 
     let info=req.body;
