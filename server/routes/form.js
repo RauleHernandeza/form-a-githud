@@ -65,7 +65,7 @@ preguntas.selectpregunta().them(resm=>{
 
 
 }).catch(err=>{
-
+ console.log(err)
     res.send({status:400,body:err});
 })
 
