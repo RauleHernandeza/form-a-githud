@@ -78,7 +78,7 @@ app.post('/delete',function(req,res){
 
 
 }).catch(err=>{
-
+console.log(err)
     res.send({status:400,body:err});
 })
 
