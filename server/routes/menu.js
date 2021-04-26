@@ -39,7 +39,7 @@ console.log("error"  +err)
 
 })
 
-app.delete('/',function(req,res){
+app.post('/',function(req,res){
 
 
     let info=req.body;
