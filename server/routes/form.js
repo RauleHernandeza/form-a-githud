@@ -46,7 +46,7 @@ app.post('/select',function(req,res){
 
 
     let resp=respt.rows;
-preguntas.selectpregunta().them(resm=>{
+preguntas.selectpregunta().then(resm=>{
     let rest=resm.rows;
    let j;
        for(i=0;i<resp.length;i++){
