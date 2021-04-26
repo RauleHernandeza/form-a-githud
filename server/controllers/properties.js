@@ -14,6 +14,7 @@ module.exports={
      selectForm:"select  * from formulario ",
 
      deleteForm:"delete from formulario where id_forrmulario= $1 ",
-     insertPregunta:"insert into  pregunta (title,input,id_forrmulario) values ($1,$2,$3)"
+     insertPregunta:"insert into  pregunta (title,input,id_forrmulario) values ($1,$2,$3)",
+    deletepregunta:"delete from pregunta where id_forrmulario=$1"
 
     }

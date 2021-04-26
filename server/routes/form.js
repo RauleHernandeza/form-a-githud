@@ -65,6 +65,11 @@ app.post('/delete',function(req,res){
 
     let info=req.body;
     console.log(info)
+    preguntas.deletepregunta(info).then(res=>{
+
+    }).catch(err=>{
+        console.log(err)
+    })
   form.deleteForm(info)
 .then(respt=>{
 
