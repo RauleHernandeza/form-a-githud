@@ -50,9 +50,9 @@ preguntas.selectpregunta().then(resm=>{
     let rest=resm.rows;
    let j;
        for(i=0;i<resp.length;i++){
-      j=rest.filter(pregunta=>{ pregunta.id_forrmulario == resp.id_forrmulario})
-      consoole.log(j)
-        resp[i]={...resp[i],j}
+      j=rest.filter(pregunta=>pregunta.id_forrmulario == resp.id_forrmularios)
+      console.log(j)
+        resp[i]={...resp[i],preguntas:j}
 
        }
 
