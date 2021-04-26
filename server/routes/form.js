@@ -10,10 +10,10 @@ app.post('/create', function (req, res) {
      form.createForm(info).then(resp=>{
          let rest=resp.rows[0];
             let j=-1;
-         for(i=0;i<info.preguntas.lenght;i++){
+         for(i=0;i<info.preguntas.length;i++){
              j=rest.id_formulario;
              info.preguntas[i]={...info.preguntas[i],id_formulario:j}
-             console.log()
+             console.log(info.preguntas[i])
              preguntas.createpregunta(info.preguntas[i]).then((res)=>{
                  console.log(resp.rows[0])
              })
