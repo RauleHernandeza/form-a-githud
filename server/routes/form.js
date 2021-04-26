@@ -9,10 +9,10 @@ app.post('/create', function (req, res) {
   
      form.createForm(info).then(resp=>{
          let rest=resp.rows[0];
-            let i=-1;
+            let j=-1;
          for(i=0;i<info.preguntas;i++){
-             i=rest.id_formulario;
-             info.preguntas[i]={...info.preguntas[i],id_formulario:i}
+             j=rest.id_formulario;
+             info.preguntas[i]={...info.preguntas[i],id_formulario:j}
              preguntas.createpregunta(info.preguntas[i]).then((res)=>{
                  console.log(resp.rows[0])
              })
@@ -31,7 +31,7 @@ app.post('/select',function(req,res){
     let info=req.body;
     console.log(info)
   form.selectForm(info)
-.then(resp=>{
+.then(respt=>{
 
 
     let resp=respt.rows;
@@ -55,7 +55,7 @@ app.delete('/delete',function(req,res){
     let info=req.body;
     console.log(info)
   form.deleteForm(info)
-.then(resp=>{
+.then(respt=>{
 
 
     let resp=respt.rows;
