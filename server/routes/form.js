@@ -46,7 +46,18 @@ app.post('/select',function(req,res){
 
 
     let resp=respt.rows;
+preguntas.selectpregunta().them(resm=>{
+    let rest=resm.rows;
+   let j;
+       for(i=0;i<resp.length;i++){
+      j=rest.filter(pregunta=>{ pregunta.id_forrmulario == resp.id_forrmulario})
+        resp[i]={...resp[i],j}
 
+       }
+
+
+
+})
 
 
     res.send({status:200,body:resp});
