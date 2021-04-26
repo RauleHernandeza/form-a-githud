@@ -72,11 +72,10 @@ app.post('/delete',function(req,res){
 .then(respt=>{
 
 
-    let resp=respt.rows;
 
 
 
-    res.send({status:200,body:resp});
+    res.send({status:200});
                  
 
 
@@ -86,6 +85,8 @@ console.log(err)
 })
  }).catch(err=>{
         console.log(err)
+        
+    res.send({status:400,body:err});
     })
 })
 module.exports=app;
