@@ -9,10 +9,11 @@ module.exports={
     select_all_menu:"select * from menu",
     
      delete_menu:"delete from menu where id_menu=$1",
-     insertForm:"insert into formulario (title,descripcion,id_menu) values ($1,$2,$3)",
+     insertForm:"insert into formulario (title_form,descripcion_form,id_menu) values ($1,$2,$3)",
 
-     selectForm:"select  * from formulario where id_formulario=$1",
+     selectForm:"select  * from formulario ",
 
-     deleteForm:"delete from formulario where id_formulario=$1"
+     deleteForm:"delete from formulario inner join pregunta on (pregunta.id_formularuio = formulario.id_formulario and formulario.id_formulario= $1 )",
+     insertPregunta:"insert into  pregunta (title,input,id_formulario) values ($1,$2,$3)"
 
     }
