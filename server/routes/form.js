@@ -5,14 +5,15 @@ const app = express();
 
 app.post('/create', function (req, res) {
     let info=req.body;
-    console.log(info)
+    console.log(info.preguntas)
   
      form.createForm(info).then(resp=>{
          let rest=resp.rows[0];
             let j=-1;
-         for(i=0;i<info.preguntas;i++){
+         for(i=0;i<info.preguntas.lenght;i++){
              j=rest.id_formulario;
              info.preguntas[i]={...info.preguntas[i],id_formulario:j}
+             console.log()
              preguntas.createpregunta(info.preguntas[i]).then((res)=>{
                  console.log(resp.rows[0])
              })
