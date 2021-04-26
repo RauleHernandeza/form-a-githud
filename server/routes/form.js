@@ -56,12 +56,12 @@ preguntas.selectpregunta().then(resm=>{
 
        }
 
-
+res.send({status:200,body:resp});
 
 })
 
 
-    res.send({status:200,body:resp});
+    
                  
 
 
